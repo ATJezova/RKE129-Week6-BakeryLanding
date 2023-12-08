@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Nova+Square&family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nova Square', sans-serif;
+    line-height: 2;
+    overflow-x: hidden;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.374), rgba(128, 0, 128, 0.434)), url('../image/img4.jpeg');
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.text-box h1 {
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 3px black, 0 0 5px purple;
+}
+
+.heading-main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1.1rem;
+    animation-name: moveInLeft;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        transform: translate(-1000px);
+        opacity: 0;
+    }
+    80% {
+        transform: translate(50px);
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+.heading-low {
+    display: block;
+    font-size: 1.6rem;
+    letter-spacing: 1.2rem;
+    animation-name: moveInRight;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveInRight {
+    0% {
+        transform: translate(1000px);
+        opacity: 0;
+    }
+    80% {
+        transform: translate(-50px);
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn {
+    color: antiquewhite;
+    display: inline-block;
+    font-size: 3rem;
+    border-bottom: 0.2rem solid palevioletred;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 5rem;
+    padding: 1rem;
+    transition: all 0.3s;
+}
+
+/* kui liikuda hiirega nupu peale*/
+.btn:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.342);
+    background-color: rgba(216, 112, 147, 0.736);
+    transform: translatey(-5px);
+}
+
+/* kui vajutada nuppu*/
+.btn:active {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.342);
+    transform: translatey(5px);
+}
+
+.main {
+    height: 95vh;
+    background-color: palevioletred;
+    text-align: center;
+    padding-top: 5rem;
+    margin-top: -5rem;
+    clip-path: polygon(50% 10%, 100% 0, 100% 43%, 100% 85%, 81% 96%, 24% 91%, 0 100%, 0% 43%, 0 0);
+}
+
+.main h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: antiquewhite;
+    text-shadow: 0 0 3px black, 0 0 5px purple;
+}
+
+.gallery {
+    width: 75%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.gallery-photo {
+    width: 350px;
+    position: absolute;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.507);
+    outline-offset: 1rem;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.gallery-photo:hover {
+    outline: 0.8rem solid rgba(216, 112, 147, 0.753);
+    transform: scale(1.1);
+    z-index: 30;
+}
+
+.gallery-img-1 {
+    left: 20%;
+    top: 5%;
+}
+
+.gallery-img-3 {
+    left: 35%;
+    top: 15%;
+}
+
+.gallery-img-2 {
+    top: 30%;
+    left: 55%;
+}
+
+.footer {
+    height: 15vh;
+    text-align: center;
+    color: palevioletred;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin: 1rem;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: palevioletred;
+}
+
+.footer ul li:hover, footer ul li a:hover {
+    color: purple;
+    transform: scale(1.2);
+}
